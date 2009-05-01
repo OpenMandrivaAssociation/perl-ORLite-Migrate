@@ -1,7 +1,7 @@
 
 %define realname   ORLite-Migrate
 %define version    0.03
-%define release    %mkrel 1
+%define release    %mkrel 2
 
 Name:       perl-%{realname}
 Version:    %{version}
@@ -21,6 +21,7 @@ BuildRequires: perl(ORLite)
 BuildRequires: perl(Params::Util)
 BuildRequires: perl(Probe::Perl)
 BuildRequires: perl-PathTools
+Requires: perl-PathTools
 
 BuildArch: noarch
 
