@@ -17,10 +17,10 @@ BuildRequires: perl(DBD::SQLite)
 BuildRequires: perl(DBI)
 BuildRequires: perl(IPC::Run3)
 BuildRequires: perl(File::pushd)
-BuildRequires: perl(File::Spec)
 BuildRequires: perl(ORLite)
 BuildRequires: perl(Params::Util)
 BuildRequires: perl(Probe::Perl)
+BuildRequires: perl-PathTools
 
 BuildArch: noarch
 
