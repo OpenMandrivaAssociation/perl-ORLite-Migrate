@@ -1,6 +1,6 @@
 
 %define realname   ORLite-Migrate
-%define version    0.01
+%define version    0.03
 %define release    %mkrel 1
 
 Name:       perl-%{realname}
