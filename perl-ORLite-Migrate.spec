@@ -1,7 +1,11 @@
+# find-requires also extracts version, which is then misunderstood by
+# rpm. therefore, forcing require skipping of File::Spec - which is
+# nevertheless required by perl-PathTools
+%define _requires_exceptions perl.File::Spec.
 
 %define realname   ORLite-Migrate
 %define version    0.03
-%define release    %mkrel 2
+%define release    %mkrel 3
 
 Name:       perl-%{realname}
 Version:    %{version}
