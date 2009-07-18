@@ -3,20 +3,19 @@
 # nevertheless required by perl-PathTools
 %define _requires_exceptions perl.File::Spec.
 
-%define realname   ORLite-Migrate
-%define version    0.03
-%define release    %mkrel 4
+%define upstream_name    ORLite-Migrate
+%define upstream_version 0.03
 
-Name:       perl-%{realname}
-Version:    %{version}
-Release:    %{release}
-License:    GPL or Artistic
-Group:      Development/Perl
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:    Extremely light weight SQLite-specific schema migration
-Source:     http://search.cpan.org/CPAN/authors/id/A/AD/ADAMK/%{realname}-%{version}.tar.gz
-Url:        http://search.cpan.org/dist/%{realname}
-BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires: perl-devel
+License:    GPL+ or Artistic
+Group:      Development/Perl
+Url:        http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://search.cpan.org/CPAN/authors/id/A/AD/ADAMK/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires: perl(DBD::SQLite)
 BuildRequires: perl(DBI)
 BuildRequires: perl(IPC::Run3)
@@ -27,7 +26,7 @@ BuildRequires: perl(Probe::Perl)
 BuildRequires: perl-PathTools
 Requires: perl(IPC::Run3)
 Requires: perl-PathTools
-
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildArch: noarch
 
 %description
@@ -49,7 +48,7 @@ provided, which should point to a directory containing standalone
 migration scripts.
 
 %prep
-%setup -q -n %{realname}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
