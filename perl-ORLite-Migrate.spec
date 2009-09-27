@@ -4,7 +4,7 @@
 %define _requires_exceptions perl.File::Spec.
 
 %define upstream_name    ORLite-Migrate
-%define upstream_version 0.03
+%define upstream_version 1.05
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
