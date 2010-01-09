@@ -19,15 +19,18 @@ Source0:    http://search.cpan.org/CPAN/authors/id/A/AD/ADAMK/%{upstream_name}-%
 BuildRequires: perl(DBD::SQLite)
 BuildRequires: perl(DBI)
 BuildRequires: perl(IPC::Run3)
+BuildRequires: perl(File::Which)
 BuildRequires: perl(File::pushd)
 BuildRequires: perl(ORLite)
 BuildRequires: perl(Params::Util)
 BuildRequires: perl(Probe::Perl)
 BuildRequires: perl-PathTools
+
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
+BuildArch: noarch
+
 Requires: perl(IPC::Run3)
 Requires: perl-PathTools
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildArch: noarch
 
 %description
 SQLite is a light weight single file SQL database that provides an
@@ -55,7 +58,7 @@ migration scripts.
 %make
 
 %check
-make test
+%make test
 
 %install
 rm -rf %buildroot
@@ -69,5 +72,3 @@ rm -rf %buildroot
 %doc LICENSE README Changes
 %{_mandir}/man3/*
 %perl_vendorlib/*
-
-
