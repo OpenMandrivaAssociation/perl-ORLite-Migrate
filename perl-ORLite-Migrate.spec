@@ -12,7 +12,7 @@
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	2
+Release:	3
 
 Summary:	Extremely light weight SQLite-specific schema migration
 License:	GPL+ or Artistic
