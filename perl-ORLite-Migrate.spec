@@ -17,7 +17,7 @@ Release:	3
 Summary:	Extremely light weight SQLite-specific schema migration
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}
+Url:		https://search.cpan.org/dist/%{upstream_name}
 Source0:	http://search.cpan.org/CPAN/authors/id/A/AD/ADAMK/%{upstream_name}-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
